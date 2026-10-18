@@ -1,0 +1,38 @@
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:#07040d;overflow:hidden;font-family:"Courier New",monospace}
+body{display:flex;align-items:center;justify-content:center}
+#wrap{position:relative;width:min(100vw,calc(100vh * 4 / 3));aspect-ratio:4/3;background:#000;box-shadow:0 0 60px #6a2cff44}
+#game{width:100%;height:100%;display:block;image-rendering:pixelated;image-rendering:crisp-edges}
+.overlay{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:#f3e9ff;text-align:center;overflow:auto;padding:8px 0;
+  background:radial-gradient(ellipse at center,#1b0b3a99 0%,#05020acc 85%)}
+#title{background:radial-gradient(ellipse at 50% 30%,#1b0b3a55 0%,#05020a99 90%)}
+.hidden{display:none!important}
+h1{margin:0;font-size:clamp(24px,5.2vw,48px);letter-spacing:4px;line-height:1.05;color:#ffd86b;
+  text-shadow:0 4px 0 #8a3a00,0 0 24px #ff9d2e99,0 0 60px #7a3cff}
+h2{margin:0;font-size:clamp(24px,5vw,44px);color:#ffd86b;text-shadow:0 3px 0 #8a3a00,0 0 20px #7a3cff}
+.sub{margin:0;font-size:clamp(11px,1.9vw,17px);color:#c9b6ff;max-width:80%}
+.btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+button{font:bold clamp(12px,2vw,18px) "Courier New",monospace;color:#2a1200;background:linear-gradient(#ffe38a,#f0a728);
+  border:3px solid #fff3c4;border-bottom-color:#a05a00;border-right-color:#a05a00;padding:10px 22px;cursor:pointer;letter-spacing:2px}
+button:hover{filter:brightness(1.15);transform:translateY(-1px)}
+button:disabled{filter:grayscale(1) brightness(.6);cursor:not-allowed;transform:none}
+.controls{display:flex;flex-wrap:wrap;gap:6px 16px;justify-content:center;max-width:86%;font-size:clamp(10px,1.6vw,14px);color:#d8ccff;
+  background:#0008;border:2px solid #6a4bd4;padding:10px 14px}
+.controls b{width:100%;color:#ffd86b;letter-spacing:3px}
+kbd{background:#ffe38a;color:#2a1200;padding:1px 6px;border-radius:3px;font-weight:bold}
+
+.panel{display:flex;flex-direction:column;align-items:center;gap:8px;width:min(86%,340px);padding:14px 16px;
+  background:linear-gradient(#150a30e6,#0a0418ee);border:2px solid #ffd86b;box-shadow:0 0 0 3px #05020a,0 0 0 5px #6a4bd4,0 0 40px #7a3cff66}
+.tabs{display:flex;width:100%;gap:6px}
+.tab{flex:1;padding:7px 4px;font-size:clamp(10px,1.7vw,14px);background:#2a1a55;color:#c9b6ff;border:2px solid #6a4bd4;letter-spacing:1px}
+.tab.active{background:linear-gradient(#ffe38a,#f0a728);color:#2a1200;border-color:#fff3c4}
+form{display:flex;flex-direction:column;gap:8px;width:100%}
+input{font:bold clamp(12px,1.9vw,16px) "Courier New",monospace;width:100%;padding:9px 10px;color:#fff;background:#0a0418;border:2px solid #6a4bd4;outline:none}
+input:focus{border-color:#ffd86b;box-shadow:0 0 12px #ffd86b55}
+input::placeholder{color:#8a78c8}
+.msg{min-height:16px;font-size:clamp(10px,1.6vw,13px);color:#ff7a8a}
+.msg.ok{color:#7aff9a}
+.hint{margin:0;font-size:clamp(9px,1.4vw,12px);color:#8a78c8}
+.welcome{margin:0;font-size:clamp(13px,2.2vw,18px);color:#ffd86b}
+button.ghost{background:transparent;color:#c9b6ff;border:2px solid #6a4bd4;padding:6px 14px;font-size:clamp(10px,1.5vw,13px)}
+.controls{padding:6px 12px}

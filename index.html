@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>As Sombras de Eldoria</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="wrap">
+  <canvas id="game" width="640" height="480"></canvas>
+
+  <div id="title" class="overlay">
+    <h1>AS SOMBRAS<br>DE ELDORIA</h1>
+    <p class="sub">Recupere os quatro cristais e derrote Baphome</p>
+
+    <div id="auth" class="panel">
+      <div class="tabs">
+        <button id="tabLogin" class="tab active" type="button">ENTRAR</button>
+        <button id="tabReg" class="tab" type="button">CRIAR CONTA</button>
+      </div>
+      <form id="authForm" autocomplete="on">
+        <input id="inUser" type="text" placeholder="Usuário" maxlength="16" autocomplete="username" spellcheck="false">
+        <input id="inPass" type="password" placeholder="Senha" maxlength="64" autocomplete="current-password">
+        <input id="inPass2" type="password" placeholder="Repita a senha" maxlength="64" autocomplete="new-password" class="hidden">
+        <div id="authMsg" class="msg"></div>
+        <button id="btnAuth" type="submit">ENTRAR</button>
+      </form>
+      <p class="hint">Seu progresso fica salvo na sua conta, neste navegador.</p>
+    </div>
+
+    <div id="menu" class="panel hidden">
+      <p id="welcome" class="welcome"></p>
+      <p id="saveInfo" class="hint"></p>
+      <div class="btns">
+        <button id="btnCont">CONTINUAR</button>
+        <button id="btnNew">NOVO JOGO</button>
+      </div>
+      <button id="btnLogout" class="ghost" type="button">TROCAR DE CONTA</button>
+    </div>
+
+    <div class="controls">
+      <b>CONTROLES</b>
+      <span><kbd>WASD</kbd>/<kbd>Setas</kbd> mover</span>
+      <span><kbd>ESPAÇO</kbd> espada</span>
+      <span><kbd>J</kbd> magia</span>
+      <span><kbd>K</kbd> esquivar</span>
+      <span><kbd>E</kbd> interagir</span>
+      <span><kbd>Q</kbd> poção</span>
+      <span><kbd>ESC</kbd> pausa</span>
+    </div>
+  </div>
+
+  <div id="pause" class="overlay hidden">
+    <h2>PAUSADO</h2>
+    <div class="btns">
+      <button id="btnResume">CONTINUAR</button>
+      <button id="btnSave">SALVAR JOGO</button>
+      <button id="btnMenu">MENU PRINCIPAL</button>
+    </div>
+  </div>
+
+  <div id="end" class="overlay hidden">
+    <h2 id="endTitle"></h2>
+    <p id="endText" class="sub"></p>
+    <div class="btns"><button id="btnEnd">OK</button></div>
+  </div>
+</div>
+<script src="game.js"></script>
+</body>
+</html>
